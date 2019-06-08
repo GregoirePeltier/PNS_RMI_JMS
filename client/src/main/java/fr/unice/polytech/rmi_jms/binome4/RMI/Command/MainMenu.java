@@ -9,7 +9,6 @@ public class MainMenu extends Menu{
 
 
     public MainMenu(Environment environment) {
-
         super(Arrays.asList(
                 new Connect(environment), new ConnectToGroup(environment), new ListGroup(environment), new ListGroupSub(environment)
         ),"Main Menu","Center of the application",environment);

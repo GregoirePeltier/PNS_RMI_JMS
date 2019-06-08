@@ -1,3 +1,4 @@
 cd client
-mvn package -DoutputDirectory=.
-java -jar .\client-1.0-SNAPSHOT.jar
+CALL mvn install
+CALL java -jar .\original-client-1.0-SNAPSHOT.jar
+CALL cd ../

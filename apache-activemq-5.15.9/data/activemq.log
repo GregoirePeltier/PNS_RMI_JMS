@@ -755,3 +755,53 @@ java.lang.InterruptedException
 2019-06-08 19:40:01,235 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:DESKTOP-TTSJBRI-49887-1560015097588-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-30
 2019-06-08 19:40:01,236 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@5700d6b1: startup date [Sat Jun 08 19:31:36 CEST 2019]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-30
 2019-06-08 19:40:01,243 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-30
+2019-06-08 20:20:06,265 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@5700d6b1: startup date [Sat Jun 08 20:20:06 CEST 2019]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2019-06-08 20:20:07,189 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\ThePrecisionBro\IdeaProjects\reseaux\PNS_RMI_JMS\apache-activemq-5.15.9\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2019-06-08 20:20:07,356 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2019-06-08 20:20:07,444 | INFO  | PListStore:[C:\Users\ThePrecisionBro\IdeaProjects\reseaux\PNS_RMI_JMS\apache-activemq-5.15.9\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2019-06-08 20:20:07,584 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:DESKTOP-TTSJBRI-50583-1560018007458-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2019-06-08 20:20:07,715 | INFO  | Listening for connections at: tcp://DESKTOP-TTSJBRI:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2019-06-08 20:20:07,717 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2019-06-08 20:20:07,723 | INFO  | Listening for connections at: amqp://DESKTOP-TTSJBRI:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2019-06-08 20:20:07,725 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2019-06-08 20:20:07,730 | INFO  | Listening for connections at: stomp://DESKTOP-TTSJBRI:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2019-06-08 20:20:07,733 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2019-06-08 20:20:07,739 | INFO  | Listening for connections at: mqtt://DESKTOP-TTSJBRI:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2019-06-08 20:20:07,741 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2019-06-08 20:20:07,748 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2019-06-08 20:20:07,786 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2019-06-08 20:20:07,860 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1c481ff2{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2019-06-08 20:20:07,911 | INFO  | Listening for connections at ws://DESKTOP-TTSJBRI:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2019-06-08 20:20:07,913 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2019-06-08 20:20:07,914 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:DESKTOP-TTSJBRI-50583-1560018007458-0:1) started | org.apache.activemq.broker.BrokerService | main
+2019-06-08 20:20:07,915 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2019-06-08 20:20:07,918 | WARN  | Store limit is 102400 mb (current store usage is 0 mb). The data directory: C:\Users\ThePrecisionBro\IdeaProjects\reseaux\PNS_RMI_JMS\apache-activemq-5.15.9\bin\..\data\kahadb only has 10547 mb of usable space. - resetting to maximum available disk space: 10547 mb | org.apache.activemq.broker.BrokerService | main
+2019-06-08 20:20:07,921 | WARN  | Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: C:\Users\ThePrecisionBro\IdeaProjects\reseaux\PNS_RMI_JMS\apache-activemq-5.15.9\bin\..\data only has 10546 mb of usable space. - resetting to maximum available disk space: 10546 mb | org.apache.activemq.broker.BrokerService | main
+2019-06-08 20:20:08,459 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2019-06-08 20:20:08,706 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2019-06-08 20:20:08,706 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2019-06-08 20:20:08,771 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2019-06-08 20:20:08,960 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2019-06-08 20:20:09,453 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2019-06-08 20:33:35,721 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:DESKTOP-TTSJBRI-50583-1560018007458-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2019-06-08 20:33:35,726 | INFO  | socketQueue interrupted - stopping | org.apache.activemq.transport.tcp.TcpTransportServer | ActiveMQ Transport Server Thread Handler: tcp://0.0.0.0:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2019-06-08 20:33:35,726 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2019-06-08 20:33:35,728 | INFO  | Could not accept connection during shutdown  : {} | org.apache.activemq.broker.TransportConnector | ActiveMQ Transport Server Thread Handler: tcp://0.0.0.0:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)[:1.8.0_161]
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)[:1.8.0_161]
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)[:1.8.0_161]
+	at org.apache.activemq.transport.tcp.TcpTransportServer$1.run(TcpTransportServer.java:494)[activemq-client-5.15.9.jar:5.15.9]
+	at java.lang.Thread.run(Thread.java:748)[:1.8.0_161]
+2019-06-08 20:33:35,729 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2019-06-08 20:33:35,733 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2019-06-08 20:33:35,734 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2019-06-08 20:33:35,743 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2019-06-08 20:33:35,768 | INFO  | PListStore:[C:\Users\ThePrecisionBro\IdeaProjects\reseaux\PNS_RMI_JMS\apache-activemq-5.15.9\bin\..\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2019-06-08 20:33:35,771 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2019-06-08 20:33:35,772 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2019-06-08 20:33:35,774 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2019-06-08 20:33:35,806 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:DESKTOP-TTSJBRI-50583-1560018007458-0:1) uptime 13 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2019-06-08 20:33:35,807 | INFO  | Apache ActiveMQ 5.15.9 (localhost, ID:DESKTOP-TTSJBRI-50583-1560018007458-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2019-06-08 20:33:35,809 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@5700d6b1: startup date [Sat Jun 08 20:20:06 CEST 2019]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2019-06-08 20:33:35,823 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook

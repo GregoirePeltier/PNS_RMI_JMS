@@ -76,6 +76,8 @@
                 <mainClass>fr.unice.polytech.rmi_jms.binome4.RMI.MainServer</mainClass>
               </manifest>
             </archive>
+            <outputDirectory>.</outputDirectory>
+
           </configuration>
         </plugin>
         <plugin>
