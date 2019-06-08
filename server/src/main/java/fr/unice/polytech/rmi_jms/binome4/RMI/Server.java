@@ -1,4 +1,4 @@
-package fr.unice.polytech.rmi_jms.binome_4.RMI;
+package fr.unice.polytech.rmi_jms.binome4.RMI;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -6,9 +6,9 @@ import java.rmi.server.UnicastRemoteObject;
 public class Server extends UnicastRemoteObject implements IServer {
 
 
-    public Server() throws RemoteException {
+    Server(int port) throws RemoteException {
+        super(port);
     }
-
 
     @Override
     public void test() {

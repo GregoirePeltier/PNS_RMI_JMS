@@ -1,13 +1,15 @@
 package fr.unice.polytech.rmi_jms.binome4.RMI.Command;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+
+import static fr.unice.polytech.rmi_jms.binome4.RMI.Messaging.ColorCode.*;
 
 public class Menu extends Command {
     private List<Command> commands;
 
-    public Menu(List<Command> commands) {
+    public Menu(List<Command> commands,String name, String description,Environment environment)
+    {
+        super(name,description,environment);
         this.commands = commands;
     }
 
@@ -28,17 +30,37 @@ public class Menu extends Command {
                 displayHelp();
             }
             else {
-                findCommand(commandName).run(line.subList(1,line.size()-1));
+
+                List<String> args1 = new ArrayList<String>();
+                if(line.size()>1)
+                    args1 = line.subList(1, line.size() - 1);
+
+                findCommand(commandName).run(args1);
             }
         }
     }
 
+    @Override
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
+    public String getDescription() {
+        return description;
+    }
+
     private void displayHelp() {
-
-
+        System.out.println("Commands available in the menu are listed with ");
+        System.out.println(ANSI_BLUE+"Command Name"+ANSI_RESET+": Description");
+        System.out.println("Type the Command Name to trigger one of the command");
+        for (Command command :
+                commands) {
+            System.out.println(ANSI_BLUE+command.getName()+ANSI_RESET + " : "+ command.getDescription());
+        }
     }
 
     private Command findCommand(String commandName) {
-        return commands.stream().filter(command -> command.name.equals(commandName)).findFirst().orElse(null);
+        return commands.stream().filter(command -> command.getName().equals(commandName)).findFirst().orElse(null);
     }
 }
