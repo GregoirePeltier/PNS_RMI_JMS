@@ -5,4 +5,8 @@ import java.rmi.RemoteException;
 
 public interface IServer extends Remote {
     void test() throws RemoteException;
+
+    IUser login(String username, String mdp)throws RemoteException;
+    IGroup getGroupByName(String groupName);
+
 }
