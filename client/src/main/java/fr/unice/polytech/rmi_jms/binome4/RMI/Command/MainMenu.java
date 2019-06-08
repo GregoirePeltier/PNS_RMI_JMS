@@ -11,7 +11,7 @@ public class MainMenu extends Menu{
     public MainMenu(Environment environment) {
 
         super(Arrays.asList(
-                new ConnectToGroup(environment)
+                new Connect(environment), new ConnectToGroup(environment)
         ),"Main Menu","Center of the application",environment);
     }
 

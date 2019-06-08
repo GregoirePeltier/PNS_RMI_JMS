@@ -15,7 +15,12 @@ public class ConnectToGroup extends Command {
     @Override
     void run(List<String> args) {
         String groupName = args.get(0);
-        IGroup group = environment.server.getGroupByName(groupName);
+        IGroup group = null;
+        try {
+            group = environment.server.getGroupByName(groupName);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
         try {
             GroupComunicator comunicator = new GroupComunicator(group,environment.user,environment.connection);
         } catch (JMSException e) {

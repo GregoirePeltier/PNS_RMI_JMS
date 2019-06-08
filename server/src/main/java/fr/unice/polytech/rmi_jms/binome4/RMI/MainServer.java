@@ -8,7 +8,7 @@ public class MainServer {
     public static void main(String args[]) throws Exception{
 
         try {
-            IServer test = new Server(1001);
+            IServer test = new Server();
             Registry reg= LocateRegistry.createRegistry(2001);
             reg.rebind("hello",test);
 
