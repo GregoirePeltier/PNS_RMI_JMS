@@ -4,9 +4,5 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 public interface IClient extends Remote {
-
-    public interface Hello extends Remote {
-        String sayHello() throws RemoteException;
-    }
-
+    String sayHello() throws RemoteException;
 }

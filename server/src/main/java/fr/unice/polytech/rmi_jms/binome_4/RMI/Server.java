@@ -1,13 +1,15 @@
 package fr.unice.polytech.rmi_jms.binome_4.RMI;
 
+import java.rmi.Naming;
 import java.rmi.registry.Registry;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-public class Server implements IClient {
+public class Server extends UnicastRemoteObject implements IClient {
 
-    public Server() {}
+    public Server() throws RemoteException{
+    }
 
     public String sayHello() {
         return "Hello, world!";
@@ -16,12 +18,10 @@ public class Server implements IClient {
     public static void main(String args[]) {
 
         try {
-            Server obj = new Server();
-            Hello stub = (Hello) UnicastRemoteObject.exportObject(obj, 0);
+            Server server = new Server();
 
-            // Bind the remote object's stub in the registry
-            Registry registry = LocateRegistry.getRegistry();
-            registry.bind("Hello", stub);
+            Registry reg= LocateRegistry.createRegistry(2001);
+            reg.rebind("hello",server);
 
             System.err.println("Server ready");
         } catch (Exception e) {

@@ -3,16 +3,15 @@ package fr.unice.polytech.rmi_jms.binome4.RMI;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
-public class Client implements IClient{
+public class Client{
 
     private Client() {}
 
     public static void main(String[] args) {
 
-        String host = (args.length < 1) ? null : args[0];
         try {
-            Registry registry = LocateRegistry.getRegistry(host);
-            Hello stub = (Hello) registry.lookup("Hello");
+            Registry registry = LocateRegistry.getRegistry("localhost",2001);
+            IClient stub = (IClient) registry.lookup("hello");
             String response = stub.sayHello();
             System.out.println("response: " + response);
         } catch (Exception e) {
