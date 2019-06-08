@@ -1,4 +1,4 @@
-package fr.unice.polytech.rmi_jms.binome_4.RMI;
+package fr.unice.polytech.rmi_jms.binome4.RMI;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

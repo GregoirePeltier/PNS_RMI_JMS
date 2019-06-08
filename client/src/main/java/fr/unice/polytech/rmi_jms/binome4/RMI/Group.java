@@ -1,4 +1,4 @@
-package fr.unice.polytech.rmi_jms.binome4;
+package fr.unice.polytech.rmi_jms.binome4.RMI;
 
 import java.util.List;
 
