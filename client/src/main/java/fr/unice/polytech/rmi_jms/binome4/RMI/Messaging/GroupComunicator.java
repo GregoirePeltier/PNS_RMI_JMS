@@ -19,8 +19,8 @@ public class GroupComunicator {
     public GroupComunicator(IGroup group, IUser user, Connection connection) throws JMSException, RemoteException {
         this.group = group;
         this.user= user;
+        connection.setClientID(user.getName());
         this.rsession = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-
 
     }
 
@@ -52,5 +52,16 @@ public class GroupComunicator {
         } catch (JMSException e) {
             e.printStackTrace();
         }
+    }
+
+    public void leave() {
+        try {
+            publisher.close();
+            rqueue.close();
+            rsession.close();;
+        } catch (JMSException e) {
+            e.printStackTrace();
+        }
+
     }
 }
