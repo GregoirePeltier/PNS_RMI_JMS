@@ -1,4 +1,4 @@
-package fr.unice.polytech.rmi_jms.binome_4a;
+package fr.unice.polytech.rmi_jms.binome_4;
 
 /**
  * Hello world!
