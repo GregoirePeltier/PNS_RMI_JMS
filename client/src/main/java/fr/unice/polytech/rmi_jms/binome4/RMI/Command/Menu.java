@@ -34,7 +34,7 @@ public class Menu extends Command {
 
                 List<String> args1 = new ArrayList<String>();
                 if(line.size()>1)
-                    args1 = line.subList(1, line.size() );
+                    args1 = line.subList(1, line.size());
 
                 findCommand(commandName).run(args1);
             }

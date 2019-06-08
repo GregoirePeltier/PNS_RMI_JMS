@@ -20,19 +20,19 @@ public class Client{
     public static void main(String[] args) {
 
         Environment environement = new Environment();
-        environement.server = new FakeServer();
-        environement.user = new FakeUser(args[0]);
-        MainMenu mainMenu = new MainMenu(environement);
-        mainMenu.run();
+
+        IServer d = null;
         try {
             Registry reg = LocateRegistry.getRegistry(2001);
-            IServer d = (IServer)reg.lookup("hello");
-            d.test();
-            IUser user = d.login("Camille","1");
-            System.out.println("Bienvenue " + user.getName());
+            d = (IServer)reg.lookup("hello");
         } catch (Exception e) {
             System.err.println("Client exception: " + e.toString());
             e.printStackTrace();
+        }
+        if (d != null) {
+            environement.server = d;
+            MainMenu mainMenu = new MainMenu(environement);
+            mainMenu.run();
         }
     }
 }

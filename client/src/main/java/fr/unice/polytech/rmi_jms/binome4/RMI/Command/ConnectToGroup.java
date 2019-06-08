@@ -19,7 +19,12 @@ public class ConnectToGroup extends Command {
     @Override
     void run(List<String> args) {
         String groupName = args.get(0);
-        IGroup group = environment.server.getGroupByName(groupName);
+        IGroup group = null;
+        try {
+            group = environment.server.getGroupByName(groupName);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
         ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616");
         connectionFactory.setTrustedPackages(new ArrayList(Arrays.asList("org.apache.activemq.test,org.apache.camel.test,fr.unice.polytech.rmi_jms.binome4.RMI.Messaging,fr.unice.polytech.rmi_jms.binome4.RMI".split(","))));
 
@@ -57,11 +62,11 @@ public class ConnectToGroup extends Command {
 
     @Override
     public String getName() {
-        return "Connect";
+        return "JoinGroup";
     }
 
     @Override
     public String getDescription() {
-        return "Connect [GroupName] allow to join a discution group";
+        return "JoinGroup [GroupName] allow to join a discution group";
     }
 }
