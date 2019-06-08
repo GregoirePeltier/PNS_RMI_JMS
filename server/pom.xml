@@ -19,6 +19,8 @@
   </properties>
 
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-core -->
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
