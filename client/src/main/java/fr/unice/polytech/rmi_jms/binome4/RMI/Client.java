@@ -5,8 +5,12 @@ import fr.unice.polytech.rmi_jms.binome4.RMI.Command.MainMenu;
 import org.apache.activemq.ActiveMQConnection;
 
 import java.rmi.Naming;
+import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 public class Client{
@@ -14,8 +18,10 @@ public class Client{
     private Client() {}
 
     public static void main(String[] args) {
-        Environment environement = new Environment();
 
+        Environment environement = new Environment();
+        environement.server = new FakeServer();
+        environement.user = new FakeUser(args[0]);
         MainMenu mainMenu = new MainMenu(environement);
         mainMenu.run();
         try {

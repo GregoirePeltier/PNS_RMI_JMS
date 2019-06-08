@@ -17,9 +17,10 @@ public class Menu extends Command {
     void run(List<String> args) {
         Scanner scanner = new Scanner(System.in);
         boolean run = true;
-        System.out.println("You are in the "+name+" menu");
-        System.out.println("type ? for available commands or q to leave");
+
         while(run){
+            System.out.println("You are in the "+name+" menu");
+            System.out.println("type ? for available commands or q to leave");
             List<String> line = Arrays.asList(scanner.nextLine().split(" "));
 
             String commandName = line.get(0);
@@ -33,7 +34,7 @@ public class Menu extends Command {
 
                 List<String> args1 = new ArrayList<String>();
                 if(line.size()>1)
-                    args1 = line.subList(1, line.size() - 1);
+                    args1 = line.subList(1, line.size() );
 
                 findCommand(commandName).run(args1);
             }
