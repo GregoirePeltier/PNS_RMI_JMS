@@ -36,7 +36,12 @@ public class Menu extends Command {
                 if(line.size()>1)
                     args1 = line.subList(1, line.size());
 
-                findCommand(commandName).run(args1);
+                Command finalCommand = findCommand(commandName);
+                if(finalCommand != null) {
+                    finalCommand.run(args1);
+                }else{
+                    System.out.println("Commande non reconnue");
+                }
             }
         }
     }
