@@ -53,6 +53,11 @@ public class Server extends UnicastRemoteObject implements IServer {
     }
     @Override
     public IGroup getGroupByName(String groupName) throws RemoteException{
+        System.out.println("groupName = [" + groupName + "]");
+        for (Group group : groups) {
+            if(group.getName().equals(groupName))
+                    return group;
+        }
         return null;
     }
 

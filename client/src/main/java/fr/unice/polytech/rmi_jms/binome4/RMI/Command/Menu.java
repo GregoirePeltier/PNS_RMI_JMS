@@ -23,7 +23,7 @@ public class Menu extends Command {
             System.out.println("type ? for available commands or q to leave");
             List<String> line = Arrays.asList(scanner.nextLine().split(" "));
 
-            String commandName = line.get(0);
+            String commandName = line.get(0).toLowerCase();
             if(commandName.equals("q") || commandName.equals("quit") || commandName.equals("exit")){
                 run = false;
             }
@@ -62,6 +62,6 @@ public class Menu extends Command {
     }
 
     private Command findCommand(String commandName) {
-        return commands.stream().filter(command -> command.getName().equals(commandName)).findFirst().orElse(null);
+        return commands.stream().filter(command -> command.getName().toLowerCase().equals(commandName)).findFirst().orElse(null);
     }
 }

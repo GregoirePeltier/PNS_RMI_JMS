@@ -18,18 +18,23 @@ public class Connect extends Command {
         IUser user;
         try {
             user = environment.server.login(username, mdp);
-            System.out.println(user.getName() + " connecté !");
-            System.out.println("Groupes disponibles :");
-            for (IGroup g : environment.server.getGroups()){
-                System.out.println(g.getName());
-            }
-            System.out.println("Groupes auxquels vous etes abonné :");
-            for (IGroup g : environment.server.getGroups()){
-                for (IUser u : g.getUsers()){
-                    if(u.getName().equals(user.getName())){
-                        System.out.println(g.getName());
+            if (user == null)
+                System.out.println("Connection Echoué");
+            else {
+                System.out.println(user.getName() + " connecté !");
+                System.out.println("Groupes disponibles :");
+                for (IGroup g : environment.server.getGroups()) {
+                    System.out.println(g.getName());
+                }
+                System.out.println("Groupes auxquels vous etes abonné :");
+                for (IGroup g : environment.server.getGroups()) {
+                    for (IUser u : g.getUsers()) {
+                        if (u.getName().equals(user.getName())) {
+                            System.out.println(g.getName());
+                        }
                     }
                 }
+                environment.user = user;
             }
         } catch (RemoteException e) {
             e.printStackTrace();

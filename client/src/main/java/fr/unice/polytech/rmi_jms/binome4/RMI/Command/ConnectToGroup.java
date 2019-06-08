@@ -26,8 +26,8 @@ public class ConnectToGroup extends Command {
             e.printStackTrace();
         }
         ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616");
-        connectionFactory.setTrustedPackages(new ArrayList(Arrays.asList("org.apache.activemq.test,org.apache.camel.test,fr.unice.polytech.rmi_jms.binome4.RMI.Messaging,fr.unice.polytech.rmi_jms.binome4.RMI".split(","))));
-
+//        connectionFactory.setTrustedPackages(new ArrayList(Arrays.asList("org.apache.activemq.test,org.apache.camel.test,fr.unice.polytech.rmi_jms.binome4.RMI.Messaging,fr.unice.polytech.rmi_jms.binome4.RMI.Messaging.GroupMessage,java.lang.reflect.Proxy,java.rmi.server.RemoteObjectInvocationHandler,java.rmi.server.RemoteObject,fr.unice.polytech.rmi_jms.binome4.RMI,java.rmi.server.RemoteObjectInvocationHandler".split(","))));
+        connectionFactory.setTrustAllPackages(true);
         try {
             Connection connection = connectionFactory.createConnection();
             GroupComunicator comunicator = new GroupComunicator(group, environment.user, connection);
